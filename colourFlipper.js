@@ -2,10 +2,9 @@ const randomColor = () => {
   let variables = "0123456789ABCDEF";
   let shade = "#";
   for (let i = 0; i < 6; i++) {
-    shade += variables[parseInt(Math.random()*16)];
+    shade += variables[Math.floor(Math.random() * 16)];
   }
   const myElement = document.getElementById("demo");
-myElement.style.backgroundColor = shade;
- return shade;
+  myElement.style.backgroundColor = shade;
+  return shade;
 };
-  
